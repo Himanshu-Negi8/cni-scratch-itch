@@ -1,0 +1,14 @@
+.gitignore
+  h_d2e5f708d95a21 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "044ee27e0443d6d63bc64fd4dac28feebed9ea01",
+  "prompts": {},
+  "humans": {
+    "h_d2e5f708d95a21": {
+      "author": "himanshu-negi-dh <himanshu.negi@deliveryhero.com>"
+    }
+  }
+}
