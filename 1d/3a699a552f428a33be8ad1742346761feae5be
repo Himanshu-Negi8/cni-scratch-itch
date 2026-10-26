@@ -1,0 +1,19 @@
+README.md
+  s_a5febfdd2e02f6::t_0766a73caf817a 17-32,81
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "1d3a699a552f428a33be8ad1742346761feae5be",
+  "prompts": {},
+  "sessions": {
+    "s_a5febfdd2e02f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "94acbee1-2d0c-40f9-9848-9337f1a51730",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Himanshu-Negi8 <himanshunegi3295@gmail.com>"
+    }
+  }
+}
