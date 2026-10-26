@@ -14,6 +14,22 @@ orchestration rather than just unit tests.
 Longer term, once the plugin follows the CNI spec correctly, evaluate whether it could
 be dropped into other clusters as a lightweight replacement for the stock CNI.
 
+### Current status
+
+- **Implemented:** `ADD` for pod-to-pod connectivity on a **single node** (bridge + veth
+  pairs + IP allocation).
+- **Not yet implemented:** **cross-node** pod-to-pod connectivity (VXLAN overlay / static
+  routes between nodes).
+- **Not yet implemented:** the `CHECK` and `DEL` commands.
+
+### Networking approach
+
+The pod network is defined entirely in software (Linux bridge, veth pairs, addresses and
+routes) through the [`vishvananda/netlink`](https://github.com/vishvananda/netlink) Go
+library, which talks to the kernel over netlink — the same mechanism `ip link` /
+`ip addr` / `ip route` use. The netlink reference is what we followed to create and
+configure these virtual devices.
+
 ### How it will be tested
 
 1. `kind-config.yaml` creates a 2-node cluster (`control-plane` + `worker`) with
@@ -62,4 +78,5 @@ implementation grows.
 - CNI spec: https://github.com/containernetworking/cni/blob/main/SPEC.md
 - Reference plugins (bridge, host-local IPAM, ptp, etc.):
   https://github.com/containernetworking/plugins
+- netlink Go library (used to define the software network): https://github.com/vishvananda/netlink
 - kind networking docs: https://kind.sigs.k8s.io/docs/user/configuration/#networking
