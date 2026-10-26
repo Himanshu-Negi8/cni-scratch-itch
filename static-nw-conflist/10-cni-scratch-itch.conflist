@@ -1,0 +1,14 @@
+{
+  "cniVersion": "1.0.0",
+  "name": "cni-scratch-itch",
+  "plugins": [
+    {
+      "type": "cni-plugin",
+      "bridge": "cni0",
+      "subnet": "10.244.0.0/24"
+    },
+    {
+      "type": "loopback"
+    }
+  ]
+}

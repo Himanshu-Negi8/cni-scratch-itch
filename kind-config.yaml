@@ -1,0 +1,33 @@
+# kind cluster configuration with disabled cni
+#
+# extraMounts below place each node's conflist straight into /etc/cni/net.d
+# at cluster-create time, so containerd picks it up without a manual
+# `docker cp` step afterwards. hostPath must be absolute - if the source
+# doesn't resolve to an existing file, Docker silently creates an empty
+# directory at containerPath instead of erroring, which leaves the node
+# NotReady with what looks like the conflist "present" but actually empty.
+
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+networking:
+  # the default CNI will not be installed
+  disableDefaultCNI: true
+nodes:
+  - role: control-plane
+    extraMounts:
+      - hostPath: /Users/himanshu.negi/himanshu-work/cni-scratch-itch/static-nw-conflist/10-cni-scratch-itch.conflist
+        containerPath: /etc/cni/net.d/10-cni-scratch-itch.conflist
+        readOnly: true
+      - hostPath: /Users/himanshu.negi/himanshu-work/cni-scratch-itch/cni-plugin
+        containerPath: /opt/cni/bin/cni-plugin
+        readOnly: true
+  - role: worker
+    extraMounts:
+      - hostPath: /Users/himanshu.negi/himanshu-work/cni-scratch-itch/static-nw-conflist/10-cni-scratch-itch-worker.conflist
+        containerPath: /etc/cni/net.d/10-cni-scratch-itch.conflist
+        readOnly: true
+      - hostPath: /Users/himanshu.negi/himanshu-work/cni-scratch-itch/cni-plugin
+        containerPath: /opt/cni/bin/cni-plugin
+        readOnly: true
+
+---
