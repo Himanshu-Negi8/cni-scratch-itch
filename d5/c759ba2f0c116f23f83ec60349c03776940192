@@ -1,0 +1,40 @@
+docs/Bridge-Networking.md
+  s_6ee0e8fa657dc1::t_a1b3730a64900f 18,34,79-201,216,219,275,282,307,332,338
+  s_6ee0e8fa657dc1::t_48e26b3910f994 15-17
+  s_6ee0e8fa657dc1::t_1af7892af5ac02 19-21,31-33
+  s_6ee0e8fa657dc1::t_077d7b9fd7dd9f 35-37,76-78
+  s_6ee0e8fa657dc1::t_9380df49ee2dab 202-204,213-215
+  s_6ee0e8fa657dc1::t_f15c69f2497f4b 217-218
+  s_6ee0e8fa657dc1::t_2e8f1c8f2c412c 220-222,272-274
+  s_6ee0e8fa657dc1::t_ac879266a79ae6 276-281
+  s_6ee0e8fa657dc1::t_288afd8ec4bc94 283-285,304-306
+  s_6ee0e8fa657dc1::t_63a41f4751e399 308-310,329-331
+  s_6ee0e8fa657dc1::t_04ee9f55179d21 333-337
+  s_6ee0e8fa657dc1::t_cdc02b844f2457 339-341
+README.md
+  s_6ee0e8fa657dc1::t_bba7b411813cc7 37,42
+  s_6ee0e8fa657dc1::t_bb9afc1398aea0 33-36,38
+docs/Testing.md
+  s_6ee0e8fa657dc1::t_bba7b411813cc7 1-169
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "d5c759ba2f0c116f23f83ec60349c03776940192",
+  "prompts": {},
+  "humans": {
+    "h_2d7d032ca8bfeb": {
+      "author": "Himanshu-Negi8 <himanshunegi3295@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_6ee0e8fa657dc1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2c9b254d-8120-4ec9-994b-b0b0f09f1d04",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Himanshu-Negi8 <himanshunegi3295@gmail.com>"
+    }
+  }
+}
