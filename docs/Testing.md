@@ -117,7 +117,7 @@ kubectl exec -n test pod1 -- ping -c3 $POD2_IP
 
 Expected output:
 
-![pod-to-pod ping](test-snapshots/pod-ping.png)
+![pod-to-pod ping](../test-snapshots/pod-ping.png)
 
 ## 7. Verify the routes on the worker node
 
@@ -128,7 +128,7 @@ docker exec -it cni-testing-worker bash
 ```
 You will see something like this if you run `ip route show` or `ip addr` from inside the docker container node:
 
-![ip route and ip addr on the worker node](test-snapshots/node-exec.png)
+![ip route and ip addr on the worker node](../test-snapshots/node-exec.png)
 
 Or run the commands directly:
 

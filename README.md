@@ -30,10 +30,16 @@ library, which talks to the kernel over netlink — the same mechanism `ip link`
 `ip addr` / `ip route` use. The netlink reference is what we followed to create and
 configure these virtual devices.
 
+### How packets flow
+
+A kernel-level walkthrough of pod-to-pod traffic through the bridge and veth pairs
+(socket buffer, namespace crossing, bridge forwarding) is in
+[docs/Bridge-Networking.md](docs/Bridge-Networking.md).
+
 ### How it will be tested
 
 Step-by-step instructions (build the binary, create the kind cluster, apply test pods,
-verify routes on the node) are in [testing.md](Testing.md).
+verify routes on the node) are in [Testing.md](docs/Testing.md).
 
 1. `kind-config.yaml` creates a 2-node cluster (`control-plane` + `worker`) with
    `networking.disableDefaultCNI: true`, so no CNI (kindnet, Calico, etc.) is installed.
