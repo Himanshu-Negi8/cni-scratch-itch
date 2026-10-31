@@ -1,0 +1,29 @@
+README.md
+  s_6ee0e8fa657dc1::t_15877d164b40f0 35,37
+  h_2d7d032ca8bfeb 36
+test-manifests/pods.yaml
+  h_2d7d032ca8bfeb 1-32
+.gitignore
+  s_6ee0e8fa657dc1::t_482e037caca9f4 2-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "b5fea208c76c64474a32507d811d156c64ad1dd2",
+  "prompts": {},
+  "humans": {
+    "h_2d7d032ca8bfeb": {
+      "author": "Himanshu-Negi8 <himanshunegi3295@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_6ee0e8fa657dc1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2c9b254d-8120-4ec9-994b-b0b0f09f1d04",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Himanshu-Negi8 <himanshunegi3295@gmail.com>"
+    }
+  }
+}
