@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+  namespace: test
+  labels:
+    app: pod1
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: cni-testing-worker
+  containers:
+    - name: busybox
+      image: busybox:1.36
+      imagePullPolicy: IfNotPresent
+      command: ["sleep", "10800"]
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+  namespace: test
+  labels:
+    app: pod2
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: cni-testing-worker
+  containers:
+    - name: busybox
+      image: busybox:1.36
+      imagePullPolicy: IfNotPresent
+      command: ["sleep", "10800"]
